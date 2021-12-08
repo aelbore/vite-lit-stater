@@ -1,13 +1,11 @@
 {
   "name": "vite-lit-stater",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
     "serve": "vite",
-    "postinstall": "qoi ./visitor-es.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "storybook": "start-storybook",
+    "postinstall": "qoi build -f es,cjs --emptyOutDir --outDir ./node_modules/@swc/visitor --config ./swc-visitor.ts"
   },
   "repository": {
     "type": "git",
@@ -21,13 +19,19 @@
   },
   "homepage": "https://github.com/aelbore/vite-lit-stater#readme",
   "devDependencies": {
-    "@qoi/build": "^0.0.13",
-    "@qoi/cli": "^0.0.14",
+    "@qoi/build": "^0.0.18",
+    "@qoi/cli": "^0.0.20",
+    "@qoi/types": "^0.0.2",
     "@rollup/pluginutils": "^4.1.1",
-    "lit": "^2.0.0-rc.4",
-    "rollup-plugin-lit-transformer": "^0.0.11",
-    "sass": "^1.39.2",
-    "tsconfig-paths": "^3.11.0",
-    "vite": "^2.5.6"
+    "@storybook/web-components": "^6.4.8",
+    "lit": "^2.0.2",
+    "rollup-plugin-lit-transformer": "^0.1.1",
+    "rollup-plugin-postcss-lit": "^2.0.0",
+    "sass": "^1.44.0",
+    "storybook": "^6.4.8",
+    "storybook-builder-vite": "^0.1.11",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.2",
+    "vite": "^2.7.1"
   }
 }

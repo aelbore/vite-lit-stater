@@ -1,11 +1,11 @@
-import { LitElement, html, css } from 'lit'
-import { property } from 'lit/decorators.js'
-
+import { LitElement, html } from 'lit'
+import { property, customElement, query } from 'lit/decorators.js'
 import './hello-world.scss'
 
+@customElement('hello-world')
 export class HelloWorld extends LitElement {
-
-  @property({ type: String, attribute: true, reflect: true }) message: string = ''
+  @property({ type: String }) message: string
+  @query('bto-element') element: HTMLElement
 
   render() {
     return html `
@@ -13,5 +13,3 @@ export class HelloWorld extends LitElement {
     `
   }
 }
-
-customElements.define('hello-world', HelloWorld)
