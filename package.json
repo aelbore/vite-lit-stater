@@ -4,8 +4,9 @@
   "description": "",
   "scripts": {
     "serve": "vite",
-    "storybook": "start-storybook",
-    "postinstall": "qoi build -f es,cjs --emptyOutDir --outDir ./node_modules/@swc/visitor --config ./swc-visitor.ts"
+    "optimize": "vite optimize",
+    "storybook": "start-storybook --no-open -p 8000",
+    "postinstall": "qoi build -f es,cjs --emptyOutDir --outDir ./node_modules/@swc/visitor --config ./swc-visitor.ts && yarn optimize"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,12 @@
     "@qoi/cli": "^0.0.20",
     "@qoi/types": "^0.0.2",
     "@rollup/pluginutils": "^4.1.1",
-    "@storybook/web-components": "^6.4.8",
+    "@storybook/web-components": "^6.4.9",
     "lit": "^2.0.2",
     "rollup-plugin-lit-transformer": "^0.1.1",
     "rollup-plugin-postcss-lit": "^2.0.0",
     "sass": "^1.44.0",
-    "storybook": "^6.4.8",
+    "storybook": "^6.4.9",
     "storybook-builder-vite": "^0.1.11",
     "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.2",

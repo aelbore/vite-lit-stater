@@ -23,5 +23,14 @@ const litVitePlugin = () => {
 
 export default defineConfig({
   esbuild: false,
+  optimizeDeps: {
+    include: [
+      "lit-html",
+      "lit-element",
+      "lit-html/directive-helpers.js",
+      "@lit/reactive-element",
+      "@lit/reactive-element/css-tag.js"
+    ]
+  },
   plugins: [ litVitePlugin(), litcss() ]
 })
