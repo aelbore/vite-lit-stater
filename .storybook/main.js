@@ -30,20 +30,22 @@ const config = {
   core: {
     "builder": 'storybook-builder-vite',
   },
-  async viteFinal(config, { configType }) {
+  async viteFinal(config) {
     config.esbuild = false
     config.plugins.push(litVitePlugin())
     config.plugins.push(litcss())
     config.optimizeDeps = {
+      ...config.optimizeDeps,
       include: [
-        "lit-html",
-        "lit-element",
-        "lit-html/directive-helpers.js",
-        "@lit/reactive-element",
-        "@lit/reactive-element/css-tag.js",
-        "ansi-to-html/lib/ansi_to_html.js"
+        ...config.optimizeDeps.include,
+        '@storybook/web-components'
       ],
-      entries: [`${path.relative(config.root, path.resolve(__dirname, '../stories'))}/**/*.stories.ts`],
+      entries: [
+        `${path.relative(
+            config.root, 
+            path.resolve(__dirname, '../stories')
+          )}/**/*.stories.ts`
+      ]
     }
     return config
   }
