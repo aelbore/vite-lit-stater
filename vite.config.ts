@@ -1,36 +1,8 @@
-import { transformLit } from 'rollup-plugin-lit-transformer'
-import { createFilter } from '@rollup/pluginutils';
-import { defineConfig, Plugin, ViteDevServer } from 'vite'
-import litcss from 'rollup-plugin-postcss-lit';
-
-const litVitePlugin = () => {
-  const filter = createFilter(/\.(ts|js)$/i);
-  const plugin: Plugin = {
-    name: 'lit-vite-plugin',
-    enforce: 'pre',
-    configureServer(server: ViteDevServer) {
-      server.watcher.on('change', (path: string) => {
-        server.ws.send({ type: 'full-reload', path })
-      })
-    },
-    transform(code: string, id: string) {
-      if (!filter(id)) return null;
-      return transformLit(code, id)
-    }
-  }
-  return plugin
-}
+import { defineConfig } from 'vite'
+import { viteLit } from 'rollup-plugin-lit-transformer'
+import litcss from 'rollup-plugin-postcss-lit'
 
 export default defineConfig({
   esbuild: false,
-  optimizeDeps: {
-    include: [
-      "lit-html",
-      "lit-element",
-      "lit-html/directive-helpers.js",
-      "@lit/reactive-element",
-      "@lit/reactive-element/css-tag.js"
-    ]
-  },
-  plugins: [ litVitePlugin(), litcss() ]
+  plugins: [ viteLit(), litcss() ]
 })
