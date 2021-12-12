@@ -3,35 +3,39 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "serve": "vite",
-    "storybook": "start-storybook",
-    "postinstall": "qoi build -f es,cjs --emptyOutDir --outDir ./node_modules/@swc/visitor --config ./swc-visitor.ts"
+    "serve": "vite dev",
+    "build:storybook": "build-storybook",
+    "storybook": "start-storybook --no-open -p 8000",
+    "storybook:static": "sirv ./storybook-static --port 8080"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aelbore/vite-lit-stater.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "vite",
+    "lit"
+  ],
+  "author": "Arjay Elbore <aelbore.sg@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aelbore/vite-lit-stater/issues"
   },
   "homepage": "https://github.com/aelbore/vite-lit-stater#readme",
   "devDependencies": {
-    "@qoi/build": "^0.0.18",
-    "@qoi/cli": "^0.0.20",
+    "@qoi/build": "^0.0.19",
+    "@qoi/cli": "^0.0.21",
     "@qoi/types": "^0.0.2",
-    "@rollup/pluginutils": "^4.1.1",
-    "@storybook/web-components": "^6.4.8",
+    "@storybook/web-components": "^6.4.9",
     "lit": "^2.0.2",
-    "rollup-plugin-lit-transformer": "^0.1.1",
+    "rollup-plugin-lit-transformer": "^0.1.2",
     "rollup-plugin-postcss-lit": "^2.0.0",
-    "sass": "^1.44.0",
-    "storybook": "^6.4.8",
+    "sass": "^1.45.0",
+    "sirv-cli": "^1.0.14",
+    "storybook": "^6.4.9",
     "storybook-builder-vite": "^0.1.11",
     "tsconfig-paths": "^3.12.0",
-    "typescript": "^4.5.2",
+    "typescript": "^4.5.3",
     "vite": "^2.7.1"
   }
 }
