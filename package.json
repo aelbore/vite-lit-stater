@@ -28,14 +28,15 @@
     "@qoi/types": "^0.0.2",
     "@storybook/web-components": "^6.4.9",
     "lit": "^2.0.2",
-    "rollup-plugin-lit-transformer": "^0.1.2",
+    "minify-html-literals": "^1.3.5",
+    "rollup-plugin-lit-transformer": "^0.2.0",
     "rollup-plugin-postcss-lit": "^2.0.0",
     "sass": "^1.45.0",
     "sirv-cli": "^1.0.14",
     "storybook": "^6.4.9",
     "storybook-builder-vite": "^0.1.11",
     "tsconfig-paths": "^3.12.0",
-    "typescript": "^4.5.3",
-    "vite": "^2.7.1"
+    "typescript": "^4.5.4",
+    "vite": "^2.7.2"
   }
 }
