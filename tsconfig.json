@@ -13,5 +13,10 @@
       "ES2019",
       "DOM"
     ]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   }
 }

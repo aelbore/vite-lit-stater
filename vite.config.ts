@@ -4,5 +4,5 @@ import litcss from 'rollup-plugin-postcss-lit'
 
 export default defineConfig({
   esbuild: false,
-  plugins: [ viteLit(), litcss() ]
+  plugins: [ viteLit({ env: 'development' }), litcss() ]
 })
