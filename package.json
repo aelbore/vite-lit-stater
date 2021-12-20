@@ -4,6 +4,8 @@
   "description": "",
   "scripts": {
     "serve": "vite",
+    "vite:build": "vite build",
+    "build": "qoi build --emptyOutDir",
     "build:storybook": "build-storybook",
     "storybook": "start-storybook --no-open -p 8000",
     "storybook:static": "sirv ./storybook-static --port 8080"
@@ -40,6 +42,6 @@
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.4",
-    "vite": "^2.7.2"
+    "vite": "^2.7.3"
   }
 }
