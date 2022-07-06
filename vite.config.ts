@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
-import { viteLit } from 'rollup-plugin-lit-transformer'
-import litcss from 'rollup-plugin-postcss-lit'
+import { ViteLit } from 'rollup-plugin-lit-element'
 
 export default defineConfig({
   esbuild: false,
-  plugins: [ viteLit(), litcss() ]
+  plugins: [ ViteLit() ]
 })

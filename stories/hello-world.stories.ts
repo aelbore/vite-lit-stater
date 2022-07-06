@@ -1,6 +1,6 @@
 import { html } from 'lit-html'
 
-import '../src/hello-world'
+import '/@/src/hello-world'
 
 export default {
   title: 'HelloWorld',
