@@ -12,7 +12,10 @@
     "lib": [
       "ES2019",
       "DOM"
-    ]
+    ],
+    "paths": {
+      "/@/src/*": [ "./src/*" ]
+    }
   },
   "ts-node": {
     "compilerOptions": {

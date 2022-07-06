@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-import './hello-world.scss'
+import '/@/src/hello-world.scss'
 
 @customElement('hello-world')
 export class HelloWorld extends LitElement {
