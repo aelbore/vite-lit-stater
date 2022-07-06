@@ -1,11 +1,10 @@
 import { defineConfig } from '@qoi/build'
-import { inlineLitElement } from 'rollup-plugin-lit-transformer'
+import { Lit } from 'rollup-plugin-lit-element'
 
 export default defineConfig({
-  plugins: [ 
-    inlineLitElement({ 
-      enforce: 'pre', 
-      minifyHTMLLiterals: true 
-    }) 
-  ]
+  external: [ 'lit/decorators.js', 'lit' ],
+  swc: {
+    jsc: { target: 'es2022' }
+  },
+  plugins: [ Lit() ]
 })
