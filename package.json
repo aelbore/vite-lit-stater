@@ -25,12 +25,13 @@
   },
   "homepage": "https://github.com/aelbore/vite-lit-stater#readme",
   "devDependencies": {
-    "@qoi/build": "^0.2.0",
-    "@qoi/cli": "^0.2.0",
+    "@qoi/build": "^0.2.1",
+    "@qoi/cli": "^0.2.1",
     "@qoi/types": "^0.0.7",
+    "@rollup/pluginutils": "^4.2.1",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
-    "@storybook/builder-vite": "^0.1.39",
+    "@storybook/builder-vite": "^0.2.0",
     "@storybook/web-components": "^6.5.9",
     "lit": "^2.2.7",
     "minify-html-literals": "^1.3.5",
@@ -39,9 +40,9 @@
     "sass": "^1.53.0",
     "sirv-cli": "^2.0.2",
     "storybook": "^6.5.9",
-    "ts-node": "^10.8.2",
+    "ts-node": "^10.9.0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4",
-    "vite": "^2.9.13"
+    "vite": "^3.0.0"
   }
 }
