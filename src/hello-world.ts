@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js'
 import '/@/src/hello-world.scss'
 
 @customElement('hello-world')
-export class HelloWorld extends LitElement {
+export class HelloWorldElement extends LitElement {
   @property({ type: String }) message: string
 
   render() {

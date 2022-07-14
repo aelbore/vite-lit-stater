@@ -3,5 +3,15 @@ import { ViteLit } from 'rollup-plugin-lit-element'
 
 export default defineConfig({
   esbuild: false,
-  plugins: [ ViteLit() ]
+  plugins: [ ViteLit() ],
+  test: {
+    globals: true,
+    include: [ 'test/**/*.test.ts' ],
+    environment: 'happy-dom',
+    reporters: [ 'verbose' ],
+    coverage: {
+      cleanOnRerun: true,
+      reporter: [ 'text', 'html' ]
+    }
+  }
 })
