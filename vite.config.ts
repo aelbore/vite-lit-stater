@@ -8,6 +8,7 @@ export default defineConfig({
     globals: true,
     include: [ 'test/**/*.test.ts' ],
     environment: 'happy-dom',
+    css: true,
     reporters: [ 'verbose' ],
     coverage: {
       cleanOnRerun: true,
