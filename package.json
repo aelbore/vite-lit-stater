@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vite",
     "vite:build": "vite build",
-    "build": "qoi build --emptyOutDir",
+    "build": "qoi-cli build --cleanOutDir",
     "build:storybook": "build-storybook",
     "storybook": "start-storybook --no-open -p 8000",
     "storybook:static": "sirv ./storybook-static --port 8080",
@@ -25,27 +25,25 @@
     "url": "https://github.com/aelbore/vite-lit-stater/issues"
   },
   "homepage": "https://github.com/aelbore/vite-lit-stater#readme",
-  "devDependencies": {
-    "@qoi/build": "^0.2.3",
-    "@qoi/cli": "^0.2.3",
-    "@qoi/types": "^0.0.8",
-    "@rollup/pluginutils": "^4.2.1",
-    "@storybook/addon-essentials": "^6.5.12",
-    "@storybook/addon-links": "^6.5.12",
-    "@storybook/builder-vite": "^0.2.4",
-    "@storybook/web-components": "^6.5.12",
-    "happy-dom": "^7.4.0",
-    "lit": "^2.4.0",
+  "devDependencies": {    
+    "@rollup/pluginutils": "^5.0.2",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-vite": "^0.2.5",
+    "@storybook/web-components": "^6.5.13",
+    "happy-dom": "^7.7.0",
+    "lit": "^2.4.1",
     "minify-html-literals": "^1.3.5",
-    "rollup-plugin-lit-element": "^0.1.0",
-    "rollup-plugin-tsconfig-paths": "^1.3.0",
-    "sass": "^1.55.0",
+    "qoi-cli": "^0.6.0",
+    "rollup-plugin-lit-element": "^0.3.1",
+    "rollup-plugin-tsconfig-paths": "^1.4.0",
+    "sass": "^1.56.1",
     "sirv-cli": "^2.0.2",
-    "storybook": "^6.5.12",
+    "storybook": "^6.5.13",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.1.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.7",
-    "vitest": "^0.24.0"
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.2"
   }
 }
